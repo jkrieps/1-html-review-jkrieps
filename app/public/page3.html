@@ -47,7 +47,7 @@
   </div>
 </nav>
 <div class="back">
-<table class="table table-striped">
+<table id="taskTable" class="table table-striped">
   <thead>
     <tr>
       <th scope="col">Titles</th>
@@ -93,6 +93,10 @@
     </tr>
   </tbody>
 </table>
+<script src="js/tablesort.min.js"></script>
+<script>
+  new Tablesort(document.getElementById('taskTable'));
+</script>
 <br>
 <h3 class="add"> Add Book </h3>
 <form>
