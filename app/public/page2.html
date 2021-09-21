@@ -10,9 +10,11 @@
     <link href="css/style.css" rel="stylesheet" type="text/css" />
 
     <title>About Me</title>
+    <script src="https://unpkg.com/vue@next"></script>
   </head>
   <body>
-    <h1 class="header"><strong>John Doe's Website</strong></h1>
+  <div id="someApp">
+    <h1 class="header"><strong>{{result.name.title}} {{result.name.first}} {{result.name.last}} Website</strong></h1>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -46,21 +48,25 @@
     </div>
   </div>
 </nav>
+
 <div class="back">
 <br>
-<a target="_blank" href="images/man.jpg">
-<img src="images/man.jpg" class="img-thumbnail imgborder" width="200px" height="200px">
+<a target="_blank" v-bind:href='result.picture.large'>
+<img v-bind:src="result.picture.large" class="img-thumbnail imgborder">
 <!--https://www.google.com/url?sa=i&url=https%3A%2F%2Ftimesofindia.indiatimes.com%2Flife-style%2Frelationships%2Fweb-stories%2Ftraits-of-a-high-quality-man%2Fphotostory%2F83890812.cms&psig=AOvVaw0YRnH_oXvTbgAi_h1CyljU&ust=1630791177141000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCIjf_9jg4_ICFQAAAAAdAAAAABAD-->
 </a>
 <br>
 <br>
-<p><strong>Name:</strong> John Doe</p>
-<p><strong>Country of Origin:</strong> Papau New Guinea</p>
-<p><strong>Birthdate:</strong> 11/08/1981</p>
-<p><strong>Age:</strong> 40</p>
-<p><strong>Email:</strong><a href="mailto:jdoe81@gmail.com">jdoe81@gmail.com</a></p>
+<p><strong>Name:</strong> {{result.name.title}} {{result.name.first}} {{result.name.last}} </p>
+<p><strong>Country of Origin:</strong> {{result.location.country}} </p>
+<p><strong>Birthdate:</strong> {{prettyBirthday}} </p>
+<p><strong>Age:</strong> {{result.dob.age}}</p>
+<p><strong>Email: </strong><a v-bind:href="'mailto:' + result.email">{{ result.email }}</a></p>
 <br>
 </div>
+</div>
+<script src="js/randomuser.js"></script>
+<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
   </body>
   <footer>
     <p>About Me | Phone: 800-555-1234 | 123 Kelley Dr, Bloomington, IN 47404</p>
