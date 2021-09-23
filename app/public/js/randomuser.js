@@ -27,10 +27,16 @@ const SomeApp = {
             });
         }
     },
+
     created() {
         this.fetchUserData();
-    }
+    },
+
+    
+
+
 
   }
+  
   
   Vue.createApp(SomeApp).mount('#someApp');
