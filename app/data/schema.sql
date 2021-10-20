@@ -1,8 +1,9 @@
+SHOW DATABASES;
 
 USE msisdb;
 DROP TABLE IF EXISTS books;
 CREATE TABLE books (
-	bookId int PRIMARY KEY NOT NULL,
+	bookId int PRIMARY KEY NOT NULL auto_increment,
 	title varchar(222) NOT NULL,
 	author VARCHAR(100) NOT NULL,
     yearPublish int NOT NULL,

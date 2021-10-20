@@ -48,8 +48,8 @@
     </div>
   </div>
 </nav>
-<div class="back">
-  <table class="table" id="SomeApp">
+<div class="back" id="SomeApp">
+  <table class="table" >
     <thead>
       <tr>
         <th>Book ID</th>
@@ -78,32 +78,33 @@
 </script> -->
 <br>
 <h3 class="add"> Add Book </h3>
+{{offerForm}}
 <form v-on:submit.prevent="postNewOffer">
   <div class="mb-3">
     <label for="title" class="form-label"><em>Title</em></label>
-    <input type="title" class="form-control" id="title" aria-describedby="emailHelp">
+    <input type="text" v-model="offerForm.title" class="form-control" id="title" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
     <label for="author" class="form-label"><em>Author<em></label>
-    <input type="author" class="form-control" id="author">
+    <input type="text" v-model="offerForm.author" class="form-control" id="author">
   </div>
   <div class="mb-3">
     <label for="year" class="form-label"><em>Year Published<em></label>
-    <input type="year" class="form-control" id="year">
+    <input type="number" v-model="offerForm.yearPublish" class="form-control" id="year">
   </div>
   <div class="mb-3">
     <label for="publish" class="form-label"><em>Publisher<em></label>
-    <input type="publish" class="form-control" id="publish">
+    <input type="text" v-model="offerForm.publisher" class="form-control" id="publish">
   </div>
   <div class="mb-3">
     <label for="count" class="form-label"><em>Count</em></label>
-    <input type="count" class="form-control" id="count">
+    <input type="number" v-model="offerForm.pageCount" class="form-control" id="count">
   </div>
   <div class="mb-3">
     <label for="msrp" class="form-label"><em>MSRP</em></label>
-    <input type="msrp" class="form-control" id="msrp">
+    <input type="number" v-model="offerForm.msrp" class="form-control" id="msrp">
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <input type="submit" value="submit">
 </form>
 <br>
 <br>
