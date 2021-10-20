@@ -78,30 +78,30 @@
 </script> -->
 <br>
 <h3 class="add"> Add Book </h3>
-<form>
+<form v-on:submit.prevent="postNewOffer">
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label"><em>Title</em></label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="title" class="form-label"><em>Title</em></label>
+    <input type="title" class="form-control" id="title" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label"><em>Author<em></label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
+    <label for="author" class="form-label"><em>Author<em></label>
+    <input type="author" class="form-control" id="author">
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label"><em>Year Published<em></label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
+    <label for="year" class="form-label"><em>Year Published<em></label>
+    <input type="year" class="form-control" id="year">
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label"><em>Publisher<em></label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
+    <label for="publish" class="form-label"><em>Publisher<em></label>
+    <input type="publish" class="form-control" id="publish">
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label"><em>Count</em></label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
+    <label for="count" class="form-label"><em>Count</em></label>
+    <input type="count" class="form-control" id="count">
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label"><em>MSRP</em></label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
+    <label for="msrp" class="form-label"><em>MSRP</em></label>
+    <input type="msrp" class="form-control" id="msrp">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
