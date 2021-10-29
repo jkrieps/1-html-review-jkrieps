@@ -70,6 +70,12 @@
               <td>{{ c.publisher }}</td>
               <td>{{ c.pageCount }}</td>
               <td>{{ prettyDollar(c.msrp) }}</td>
+              <td>
+                <button type="button" class="btn btn-outline-secondary btn-sm"
+                              v-on:click="selectOfferToEdit(book)">Edit</button>
+                <button type="button" class="btn btn-outline-secondary btn-sm"
+                              v-on:click="postDeleteOffer(book)">Delete</button>
+              </td>
           </tr>
       </tbody>
   </table>
